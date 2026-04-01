@@ -1,0 +1,120 @@
+@font-face {
+    font-family: MonkeyIslandFont;
+    src: url(MonkeyIsland-1990.ttf);
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url(Coolvetica\ Rg.otf);
+}
+
+@font-face {
+    font-family: Escape;
+    src: url(fonts/efmi.TTF);
+}
+
+@font-face {
+    font-family: Goodluck;
+    src: url(fonts/GoodluckBeautiful.ttf);
+}
+
+@font-face {
+    font-family: ScummCredits;
+    src: url(fonts/lucasarts-scumm-credits.otf);
+}
+
+@font-face {
+    font-family: Weathered;
+    src: url(fonts/WEATHERD.TTF);
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
+    font-weight:bold;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-weight:normal;
+    font-style:italic;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
+    font-weight:bold;
+    font-style:italic;
+}
+
+body {
+    font-family: Atkinson;
+    font-size: 20px;
+    line-height: 26px;
+    margin:0px;
+    margin-bottom:64px;
+    background:#1e1e2e;
+    color:#cdd6f4;
+}
+
+p {
+    width:80%;
+    max-width: 1000px;
+    margin:auto;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: Escape;
+    text-align:center;
+    font-size: 60px;
+    font-weight: normal;
+    color:#89b4fa
+}
+
+h2 {
+    font-family: Escape;
+    text-align:center;
+    font-size:40px;
+    font-weight: normal;
+    margin-top:120px;
+    color:#f5c2e7
+}
+
+img {
+    display:block;
+    margin:auto;
+    image-rendering: pixelated;
+}
+.blurred {
+    image-rendering:auto;
+}
+
+figure{
+    display: block;
+    margin:auto;
+}
+
+figcaption{
+    font-style: italic;
+    text-align: center;
+    margin:auto;
+    max-width: 800px;
+    margin-top:5px;
+    margin-bottom: 12px;
+}
+
+iframe {
+    display:block;
+    margin:auto;
+}
