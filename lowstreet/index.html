@@ -13,7 +13,13 @@
 
         <img src="lowstreet.png" height="720">
 
-        <h2>Broken Parrot</h2>
+        <p>
+            <a href="../index.html">< < Back</a> ------ 
+            <a href="../forest/forest.html">< Forest oddities</a> ------ 
+            <a href="../highstreet/highstreet.html">High Street oddities ></a>
+        </p>
+
+        <h2 id="parrot">Broken Parrot</h2>
         <p>Whenever Guybrush exits Low Street towards the Docks, there's a small chance that the Citizen of Mêlée's parrot will squawk right before the scene changes. The odds of it happening are low enough that you could easily finish the game without ever seeing it happen, and when it <i>does</i> happen it can be startling because of how unexpected it is. There's no obvious pattern or trigger, other than the fact that it only ever seems to happen right before the screen transition to the Docks.</p>
 
         <img src="parrotarchway.gif" width="960" height="720">
@@ -34,15 +40,15 @@
 
         <p>Anyway, we're now left with one more question - why <i>does</i> the parrot sometimes squawk right before Guybrush leaves the room? The reason has to do with the fact that every time SCUMM starts running a script, it can say whether or not that script should be paused during a cutscene (which means any time control is taken away from the player, such as while Guybrush is walking through the archway to the Docks). The parrot script <i>doesn't</i> pause during cutscenes, but the interfering script <i>does</i>, which means if a squawk attempt happens during the brief window when Guybrush is walking through the archway, it squawks!</p>
 
-        <p>This isn't actually the only way to make it squawk, through. All you have to do is put the game into a state that it considers a cutscene, which can be done in several ways. If you read LeChuck's note while standing near the parrot, for example, it will usually trigger while Guybrush is reading it, although the text itself gets delayed until he's done.</p>
+        <p>This isn't actually the only way to make it squawk, through. All you have to do is put the game into a state that it considers a cutscene, which can be done in several ways. If you read LeChuck's note while standing near the parrot, for example, it will usually trigger while Guybrush is reading it (as indicated by the wings flapping), though the text itself gets delayed until he's done.</p>
 
         <img src="parrotnote.gif" width="960" height="720">
 
-        <p>Also, in the demo versions of Secret of Monkey Island (both the Passport to Adventure demo and the standalone demo), the parrot actually works as intended, though the text saying "Braaaak!" hadn't been added yet. This makes sense, since the demos don't include the copy protection screen, which is where the interfering script is located.</p>
+        <p>Also, in the demo versions of Secret of Monkey Island (both the Passport to Adventure demo and the standalone demo), the parrot actually works as intended, though the text saying "Braaaak!" hadn't been added yet. This makes sense, since the demos don't include the copy protection screen, which is where the interfering script is located. However it does make me wonder if it genuinely worked correctly at this point in development, or if it was always broken but they <i>accidentally fixed it</i> when compiling the demo by excluding the interfering script.</p>
 
         <img src="parrotdemo.gif" width="960" height="720">
         
-        <h2>Fin's Stray Pixels</h2>
+        <h2 id="finpixels">Fin's Stray Pixels</h2>
 
         <p>Here's what the animation frames of Fin's head look like. See if you can spot the problem:</p>
 
@@ -55,7 +61,7 @@
         <img src="finpoint.gif" width="960" height="720">
         <img src="finzoomed.gif" width="616" height="352">
 
-        <h2>Randomly-Generated Onomatopoeia</h2>
+        <h2 id="onomatopoeia">Randomly-Generated Onomatopoeia</h2>
 
         <p>Whenever Frank hits Fred on the head, the game displays a three-letter onomatopoeia representing the sound - something like "-- pfk --". It turns out the onomatopoeia is generated randomly every time! The third letter will always be K, but the first two letters get chosen randomly.</p>
 
@@ -63,14 +69,16 @@
 
         <p>And yes, this means several potentially-rude letter combinations are indeed possible.</p>
 
-        <h2>Pirate Curfew</h2>
+        <h2 id="curfew">Pirate Curfew</h2>
 
-        <p>An easy-to-miss detail is that both the wandering pirates and the lights in the windows turning on and off are actually dependent on whether or not Elaine's been kidnapped! After the kidnapping, the streets are devoid of wandering pirates, and all lights that were already on remain on, as if to suggest everyone's hiding indoors.</p>
+        <p>An easy-to-miss detail is that both the wandering pirates and the lights in the windows turning on and off no longer happen after Elaine's been kidnapped! The lights staying on seems to suggest that everyone's hiding indoors.</p>
 
         <figure><img src="prekidnap.gif" width="960" height="720"><figcaption>Pre-kidnapping</figcaption></figure>
         <figure><img src="postkidnap.gif" width="960" height="720"><figcaption>Post-kidnapping</figcaption></figure>
 
-        <h2>Walking Spectre</h2>
+        <p>The same thing also applies to <a href="../highstreet/index.html#curfew">High Street</a>.</p>
+
+        <h2 id="spectre">Walking Spectre</h2>
         <p>The Grim Spectre in Part 4 has a full suite of directional walking animations, despite the fact that he never actually moves from his spot.</p>
 
         <img src="specterwalk.gif" width="960" height="720">

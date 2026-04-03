@@ -72,6 +72,10 @@ p {
     margin:auto;
     margin-top: 18px;
     margin-bottom: 18px;
+    text-indent: 32px;
+}
+.doubleindent {
+    text-indent: 64px;
 }
 
 h1 {
@@ -117,4 +121,13 @@ figcaption{
 iframe {
     display:block;
     margin:auto;
+}
+
+audio {
+    display: block;
+    margin: auto;
+}
+
+a {
+    color: #89b4fa;
 }

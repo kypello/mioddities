@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Forest oddities</title>
+        <link rel="stylesheet" href="../styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Forest oddities</h1>
+        </header>
+
+        <img src="forest.png" height="720">
+
+        <p>
+            <a href="../index.html">< < Back</a> ------ 
+            <a href="../highstreet/highstreet.html">< High Street oddities ></a> ------ 
+            <a href="../lowstreet/lowstreet.html">Low Street oddities ></a>
+        </p>
+
+        <h2 id="layout">Not-So-Confusing Layout</h2>
+
+        <p>If you've ever gone looking for a full map of Mêlée Island's forest, there's a good chance you've come across this one, which has been floating around on the internet for a long time.</p>
+
+        <figure><img src="skillwastemap.gif" class="blurred"><figcaption>This map was made by someone called Skillwaste, and comes from an old fan site called worldofmi.com which no longer exists.</figcaption></figure>
+
+        <p>While it works for finding your way around, the layout certainly looks pretty confusing. It's a bit of a spaghetti mess with paths going all over the place and connections that don't seem to make any sense.</p>
+
+        <p>However, the layout is actually a lot more logical than this map would suggest.</p>
+
+        <p>If we assume the weird directions come from the <i>camera angle</i> changing, rather than the path itself, then the layout actually looks more like <i>this</i>!</p>
+
+        <figure><img src="hintbookmap.jpg" class="blurred" height="1000"><figcaption>This map comes from the game's official hint book</figcaption></figure>
+
+        <p>Turns out it's a perfectly self-consistent grid! Considering how the forest can be so disorienting that people sometimes think it's randomly generated like the catacombs, I doubt anyone playing through the game normally would ever pick up on this. It's a pefect example of developers putting a lot of work into something that no one's going to notice.</p>
+
+        <figure><img src="forestexample.gif" width="1560" height="720">
+            <figcaption>Guybrush is walking "north". The camera is facing "east" in room C2 and "west" in room C3.</figcaption>
+        </figure>
+
+        <p>By the way, I'll be using this coordinate system to make it easier to follow which rooms I'm talking about from now on. With that said let's look at some weird stuff in the forest!</p>
+
+        <h2 id="bones">Creepy Bones</h2>
+
+        <p>In room A5, there's a mysterious pile of bones. It's not too difficult to find, but it's not on the path to either Carla's house or the treasure, which means you'll never see it unless you wander off the beaten track.</p>
+
+        <img src="forestbones.png" width="1560" height="720">
+
+        <p>Interestingly, while skulls and corpses are a common sight on Monkey Island, I think this pile of bones is the only instance of human remains to be found anywhere on Mêlée.</p>
+
+        <h2 id="storekeeper">Catching the Storekeeper</h2>
+
+        <p>When the Storekeeper is in the forest, he stays in one room at a time and waits for you to enter the same room before moving to the next one, regardless of whether you've gone off course or not in the meantime. This means if you decide to go the long way around, it's possible to go in a loop and come at the Storekeeper from the opposite direction! Nothing special happens, unfortunately - he just walks straight past Guybrush without a care in the world.</p>
+
+        <iframe width="1560" height="720" src="https://www.youtube.com/embed/TVqqAcffHcA?si=0tZR-W11Hi5eEtb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p>You can even make it happen twice - first in room D2 and then again in room D3.</p>
+
+        <h2 id="deadend">Lonely Dead End</h2>
+
+        <p>The deepest location within the maze part of the forest is this unnasuming dead end in room A8. This is where you'll end up if you follow the directions to the treasure, but then take a wrong turn at the very end. The odds of someone stumbling upon it by wandering randomly are about equal to the odds of them finding the treasure randomly, and someone who <i>is</i> following the path is unlikely to veer off at the last second, too. For this reason, this dead end is almost certainly the <b>least-visited room in the entire game.</b></p>
+
+        <img src="forestdeadend.png" width="1560" height="720">
+
+        <p>The next time you're in Mêlée Island's forest, consider paying the lonely dead end a visit.</p>
+
+        <h2 id="dejavu">Déjà Vu</h2>
+
+        <p>The path to the treasure takes you through two rooms (C5 and A7) that look almost identical. Both feature the exact same junction layout with a log bridge on the left, a large rock in the middle, and two trees on the right. The only difference is in the pattern of stars and trees in the background in the upper left. Because they look so similar, you get the sensation that the map is leading you in circles, which is probably intentional.</p>
+
+        <img src="forestlogbridge1.png" width="1560" height="720">
+        <img src="forestlogbridge2.png" width="1560" height="720">
+
+        <h2 id="ledge">Inaccessable Ledge</h2>
+
+        <p>Rooms B5 and A3 both feature a ravine running down the middle, splitting them in half. But while both halves of room B5 can be reached from different places, the left side of A3 is completely inaccessable, despite appearing to have a path leading off the left side of the screen.</p>
+
+        <img src="forestravine.png" width="1560" height="720">
+
+        <h2 id="fireflies">Firefly Colors</h2>
+
+        <p>The color of the fireflies was changed between the floppy disk and CD versions of the game. The floppy version has bright yellow fireflies, while the CD version has red fireflies. This does appear to have been unintentional, but the technical explanation as to what went wrong is a little complicated.</p>
+
+        <figure>
+            <img src="forestfirefliesfloppy.gif" width="960" height="720">
+            <figcaption>VGA Floppy version</figcaption>
+        </figure>
+        <figure>
+            <img src="forestfirefliescd.gif" width="960" height="720">
+            <figcaption>CD version</figcaption>
+        </figure>
+
+        <p>The first thing we have to understand is that the fireflies use (or at least, are supposed to use) <b>palette cycling!</b> This is a technique used all over the game, and it's essentially a way of animating things by swapping out colors through code, instead of storing additional animation frames. Pay close attention to the yellow fireflies in the floppy version when they appear and disappear. For a split second, they turn into a single pixel (it's actually just the outer color being replaced with transparency), which creates the illusion of them "growing" and "shrinking" in and out of the darkness. You'll also notice that this effect is missing in the CD version - the fireflies simply pop in and out of existence. This is our first clue as to what's gone wrong.</p>
+
+        <p>Let's take a look at what the firefly's costume looks like internally:</p>
+
+        <figure>
+            <img src="fireflycostumes.png" height=256>
+            <figcaption>Left: floppy costume (identical in EGA and VGA). Right: CD costume. Note, the rows of colors at the top are the palettes, added by me, not part of the actual sprite.</figcaption>
+        </figure>
+
+        <p>Huh! It's red across all versions! This in itself isn't too weird. There are a few other instances of palette cycling where the "default" appearance internally uses strange colors (such as the dock sunset), but the game handles it by swapping in the correct colors at runtime. That's exactly what's happening here in the floppy version, but it somehow got broken in the CD version, so we're left seeing only the default red colors and no shrinking in and out.</p>
+
+        <p>The problem appears to come from the CD firefly's reds being ever-so-slightly brighter than those in the floppy firefly. Actors seem to have been universally brightened throughout the CD version, and this is a symptom of that. It's probably too subtle to see on the fireflies without opening them in an image editor, but the difference is more noticable on Guybrush.</p>
+
+        <p>Anyway, rather than brightening <i>the same color palette slots that were already used</i> (that's slots 5 and 13 from the left - the dark red and the peachy red), these new ever-so-slightly-brighter colors ended up in slots 2 and 3 near the beginning. I can only guess at why this happened, but it was probably caused by an automated workflow meddling with the palette, and the programmers either forgot or didn't notice that the numbers in the code were no longer pointing to the correct slots. This means that in the CD version, the game is still <i>trying</i> to cycle the colors correctly, but to no avail, since slots 5 and 13 are no longer in use.</p>
+
+        <p>I don't think I mind the red fireflies, personally. They look kinda cool in their own way, although it is a shame that the shrinking-and-growing effect got lost.</p>
+
+        <h2 id="music">Chasing Music</h2>
+
+        <p>There are two different versions of the forest theme - the regular one for when you're on your own, and one for when you're following the Storekeeper. The regular version has an additional instrument, which isn't there in the Storekeeper version. It sounds like a flute or some kind of wind instrument in the background.</p>
+
+        <figure>
+            <audio controls>
+                <source src="Track2.mp3">
+            </audio>
+            <figcaption>Regular version</figcaption>
+        </figure>
+
+        <figure>
+            <audio controls>
+                <source src="Track3.mp3">
+            </audio>
+            <figcaption>Following the Storekeeper version</figcaption>
+        </figure>
+        
+        <p>Personally, I kinda feel like these should be the other way around. The music should gain an extra instrument to represent the extra character.</p>
+    </body>
+</html>
