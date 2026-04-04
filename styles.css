@@ -144,13 +144,13 @@ a {
     margin-left: 32px;
     margin-right: 32px;
     float:left;
+    color:#f5c2e7
 }
 .right_button {
     float: right;
 }
 
 .nav_bar {
-    color: #f9e2af;
     background-color: #313244;
     height: 128px;
 }
