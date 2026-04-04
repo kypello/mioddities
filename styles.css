@@ -1,6 +1,6 @@
 @font-face {
     font-family: MonkeyIslandFont;
-    src: url(MonkeyIsland-1990.ttf);
+    src: url(fonts/MonkeyIsland-1990.ttf);
 }
 
 @font-face {
@@ -57,9 +57,6 @@
 }
 
 body {
-    font-family: Atkinson;
-    font-size: 20px;
-    line-height: 26px;
     margin:0px;
     margin-bottom:64px;
     background:#1e1e2e;
@@ -67,6 +64,10 @@ body {
 }
 
 p {
+    font-family: Atkinson;
+    font-size: 20px;
+    line-height: 26px;
+
     width:80%;
     max-width: 1000px;
     margin:auto;
@@ -79,17 +80,17 @@ p {
 }
 
 h1 {
-    font-family: Escape;
+    font-family: MonkeyIslandFont;
     text-align:center;
-    font-size: 60px;
+    font-size: 48px;
     font-weight: normal;
     color:#89b4fa
 }
 
 h2 {
-    font-family: Escape;
+    font-family: MonkeyIslandFont;
     text-align:center;
-    font-size:40px;
+    font-size:32px;
     font-weight: normal;
     margin-top:120px;
     color:#f5c2e7
@@ -110,12 +111,14 @@ figure{
 }
 
 figcaption{
+    font-family: Atkinson;
     font-style: italic;
     text-align: center;
     margin:auto;
     max-width: 800px;
     margin-top:5px;
     margin-bottom: 12px;
+    font-size:20px;
 }
 
 iframe {
@@ -130,4 +133,46 @@ audio {
 
 a {
     color: #89b4fa;
+    text-decoration:none;
+}
+
+.nav_button {
+    font-family: MonkeyIslandFont;
+    font-size: 32px;
+    line-height: 128px;
+
+    margin-left: 32px;
+    margin-right: 32px;
+    float:left;
+}
+.right_button {
+    float: right;
+}
+
+.nav_bar {
+    color: #f9e2af;
+    background-color: #313244;
+    height: 128px;
+}
+
+.nav_bar_placeholder {
+    background-color: #313244;
+    height: 128px;
+}
+
+
+
+.nav_button_container {
+    height: 128px;
+    width: 49.5%;
+    display:inline-block;
+    margin:0px;
+}
+
+.home {
+    width:24.75%
+}
+
+.pages {
+    width: 50%;
 }
