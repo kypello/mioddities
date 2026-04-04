@@ -65,10 +65,10 @@ body {
 
 p {
     font-family: Atkinson;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
 
-    width:80%;
+    width:95%;
     max-width: 1000px;
     margin:auto;
     margin-top: 18px;
@@ -101,9 +101,24 @@ img {
     margin:auto;
     image-rendering: pixelated;
 }
-.blurred {
+.normal_image {
     image-rendering:auto;
+    max-width: 100%;
 }
+.pixel_image {
+    max-width: 100%
+}
+.screenshot {
+    width: 960px;
+    max-width: 100%;
+    aspect-ratio: 1.3333;
+}
+.forest_map_screenshot {
+    width: 1560px;
+    max-width: 100%;
+    aspect-ratio: 2.1667;
+}
+
 
 figure{
     display: block;
@@ -138,11 +153,11 @@ a {
 
 .nav_button {
     font-family: MonkeyIslandFont;
-    font-size: 32px;
-    line-height: 128px;
+    font-size: 8px;
+    line-height: 64px;
 
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 8px;
+    margin-right: 8px;
     float:left;
     color:#f5c2e7
 }
@@ -152,25 +167,18 @@ a {
 
 .nav_bar {
     background-color: #313244;
-    height: 128px;
+    height: 64px;
 }
-
-.nav_bar_placeholder {
-    background-color: #313244;
-    height: 128px;
-}
-
-
 
 .nav_button_container {
-    height: 128px;
-    width: 49.5%;
+    height: 64px;
+    width: 47%;
     display:inline-block;
     margin:0px;
 }
 
 .home {
-    width:24.75%
+    width:25%
 }
 
 .pages {
