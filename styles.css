@@ -153,34 +153,38 @@ a {
 
 .nav_button {
     font-family: MonkeyIslandFont;
-    font-size: 8px;
-    line-height: 64px;
+    font-size: 16px;
+    line-height: 32px;
 
     margin-left: 8px;
     margin-right: 8px;
-    float:left;
-    color:#f5c2e7
-}
-.right_button {
-    float: right;
+    color:#f5c2e7;
+
+    min-width: 80px;
 }
 
 .nav_bar {
     background-color: #313244;
-    height: 64px;
+    min-height: 32px;
 }
 
 .nav_button_container {
-    height: 64px;
-    width: 47%;
+    height: 32px;
+    width: 32%;
     display:inline-block;
-    margin:0px;
-}
+    margin:2px;
 
-.home {
-    width:25%
+    min-width:200px;
 }
 
 .pages {
-    width: 50%;
+    width: 50%
+}
+
+.right_button_container {
+    text-align:left;
+}
+
+.left_button_container {
+    text-align:right;
 }
