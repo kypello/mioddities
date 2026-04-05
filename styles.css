@@ -106,7 +106,10 @@ img {
     max-width: 100%;
 }
 .pixel_image {
-    max-width: 100%
+    max-width: 100%;
+}
+.header_image {
+    width: 100%;
 }
 .screenshot {
     width: 960px;
