@@ -92,21 +92,32 @@ p {
 .doubleindent {
     text-indent: 64px;
 }
+
 .code {
     text-indent: 0px;
     font-family: SpaceMono;
     font-weight: bold;
-    max-width:900px;
-    font-size:18px;
-    background-color: #181825;
-    padding:16px;
-    border-radius: 16px;
+
+    width:unset;
+    max-width:none;
+
+    flex: 0 0 auto;
 }
 
 .code_container {
     background-color: #181825;
-    border-radius: 30px;
-    height:300px;
+
+    max-width:900px;
+    width:90%;
+
+    margin: 0 auto;
+
+    padding:8px;
+    border-radius: 16px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
 }
 
 var {

@@ -39,11 +39,15 @@
 
         <p>The algorithm is essentially equivalent to the following pseudocode, where a random string is selected within each set of square brackets:</p>
 
-        <p class="code"><var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]<br/>
+        <div class="code_container">
+            <p class="code"><var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]<br/>
             <var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]<br/>
             <var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]<br/>
             <var>result</var> = <var>threep</var> + <var>wood</var>
             </p>
+        </div>
+
+        
 
         
 
@@ -68,7 +72,7 @@
         <p>SCUMM v4 (floppy versions) and SCUMM v5 (CD version) seem to use slightly different actor scaling algorithms. Most of the time, this isn't really noticable, but in the case of the Lookout (who is actually shown at roughly 94% scale in this scene), he comes out looking noticably different in both versions. In the CD version, he looks almost identical to his full-scale sprite, while in the floppy versions, he's distorted such that the gap between the lenses in his glasses disappears. This makes him appear to be seen from a more side-on perspective, or maybe like he's wearing thick safety goggles or something.</p>
 
         <figure>
-            <img src="lookoutcomparison.png" class="pixel_image" height="384">
+            <img src="lookoutcomparison.png" class="pixel_image" width="512">
             <figcaption>Left: VGA floppy. Right: CD.</figcaption>
         </figure>
         
