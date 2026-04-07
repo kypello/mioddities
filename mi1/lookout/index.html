@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lookout oddities</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Lookout oddities</h1>
+        </header>
+
+        <img src="lookout.png" class="header_image">
+
+        <div class="nav_bar">
+            <div class="nav_button_container home">
+                <a href="../" class="nav_button home_button"><<- home</a>
+            </div>
+
+            <div class="nav_button_container pages">
+                    <div class="nav_button_container left_button_container">
+                    <a href="../" class="nav_button left_button"></a>
+                </div>
+
+                <div class="nav_button_container right_button_container">
+                    <a href="../" class="nav_button right_button"></a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Randomly-Generated Name Butcherings</h2>
+
+        <p>If you go back and talk to the Lookout at least twice, he'll say something like <b>"Oh, it's you again, Thumpwind."</b> However, the actual Threepwood-butchering is generated randomly every time you talk to him!</p>
+
+        <img src="randomnames.gif", class="screenshot">
+
+        <p>The algorithm is essentially equivalent to the following pseudocode, where a random string is selected within each set of square brackets:</p>
+
+        <p class="code"><var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]<br/>
+            <var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]<br/>
+            <var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]<br/>
+            <var>result</var> = <var>threep</var> + <var>wood</var>
+            </p>
+
+        
+
+        <p>By my count, that's 272 unique permutations, though some will be more likely to appear than others. The first syllable will most often be "three" or "thump", because the other options nest a random character within them, making each possibility individually rarer; and the second syllable has a 3/4 chance of ending in "d" and a 1/4 chance of ending in "k".</p>
+
+        <p>It's a ridiculously overengineered system that hardly anyone will notice, and I love the game for it.</p>
+
+        <p>For the Special Edition, they understandably couldn't make it work with voiceover, so they selected only six variations for Rob Paulsen to read: <b>"Thumpwood", "Thratwook", "Throozwalk", "Thrutwalk", "Threebwalk",</b> and <b>"Threetwink"</b>.</p>
+
+        <p>Shinetop also uses the exact same system when he catches you at the front door of the mansion.</p>
+
+        <h2>Off-Duty Lookout</h2>
+
+        <p>If you visit Lookout Point after finishing the last trial but before seeing the cutscene on the Dock where Elaine gets kidnapped, the Lookout will actually be missing! Presumably, he's already down there somewhere, ready to show up to hand you LeChuck's note.</p>
+
+        <img src="lookoutmissing.png" class="screenshot">
+
+        <p>It's easy to miss, but if you do see it, it's an unnerving sign that <i>something's not right</i> before you see the Ghost Ship itself. You'll also never see it if you do the thievery trial last, because the cutscene will trigger immediately upon getting out of the water.</p>
+
+        <h2>Glasses or Goggles?</h2>
+
+        <p>SCUMM v4 (floppy versions) and SCUMM v5 (CD version) seem to use slightly different actor scaling algorithms. Most of the time, this isn't really noticable, but in the case of the Lookout (who is actually shown at roughly 94% scale in this scene), he comes out looking noticably different in both versions. In the CD version, he looks almost identical to his full-scale sprite, while in the floppy versions, he's distorted such that the gap between the lenses in his glasses disappears. This makes him appear to be seen from a more side-on perspective, or maybe like he's wearing thick safety goggles or something.</p>
+
+        <figure>
+            <img src="lookoutcomparison.png" class="pixel_image" height="384">
+            <figcaption>Left: VGA floppy. Right: CD.</figcaption>
+        </figure>
+        
+        <div class="nav_bar">
+            <div class="nav_button_container home">
+                <a href="../" class="nav_button home_button"><<- home</a>
+            </div>
+
+            <div class="nav_button_container pages">
+                    <div class="nav_button_container left_button_container">
+                    <a href="../" class="nav_button left_button"></a>
+                </div>
+
+                <div class="nav_button_container right_button_container">
+                    <a href="../" class="nav_button right_button"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -56,6 +56,20 @@
     font-style:italic;
 }
 
+@font-face {
+    font-family: SpaceMono;
+    src: url(fonts/SpaceMono-Regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: SpaceMono;
+    src: url(fonts/SpaceMono-Bold.ttf);
+    font-weight:bold;
+    font-style:normal;
+}
+
 body {
     margin:0px;
     margin-bottom:64px;
@@ -77,6 +91,30 @@ p {
 }
 .doubleindent {
     text-indent: 64px;
+}
+.code {
+    text-indent: 0px;
+    font-family: SpaceMono;
+    font-weight: bold;
+    max-width:900px;
+    font-size:18px;
+    background-color: #181825;
+    padding:16px;
+    border-radius: 16px;
+}
+
+.code_container {
+    background-color: #181825;
+    border-radius: 30px;
+    height:300px;
+}
+
+var {
+    color: #f38ba8;
+    font-style:normal;
+}
+str {
+    color: #a6e3a1;
 }
 
 h1 {

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dock oddities</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Dock oddities</h1>
+        </header>
+
+        <img src="dock.png" class="header_image">
+
+        <div class="nav_bar">
+            <div class="nav_button_container home">
+                <a href="../" class="nav_button home_button"><<- home</a>
+            </div>
+
+            <div class="nav_button_container pages">
+                    <div class="nav_button_container left_button_container">
+                    <a href="../" class="nav_button left_button"></a>
+                </div>
+
+                <div class="nav_button_container right_button_container">
+                    <a href="../" class="nav_button right_button"></a>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Green Sunset</h2>
+
+        <p>In the EGA floppy version, a sunset can be seen from the Dock when Guybrush first arrives on Mêlée Island, which later disappears. Rather than creating two separate versions of the artwork, the game uses <b>palette cycling</b> for this - essentially swapping out specific colors in the background to make it look one way or the other.</p>
+
+        <p>Internally, the background used for the Dock looks like this:</p>
+
+        <figure>
+            <img src="dockgreen.png" width="2016" class="pixel_image">
+            <figcaption>Mêlée has fallen victim to some kind of nuclear accident.</figcaption>
+        </figure>
+
+        <p>Rather than treating one of the two states as the "default" and drawing the background that way, the artist instead used greens and purples as placeholders for the colors that need to change.</p>
+
+        <p>This comparison might make it easier to see exactly how the colors are being replaced:</p>
+
+        <figure>
+            <img src="dockcomparison.png" class="pixel_image" width="1800">
+            <figcaption>Left to right: Raw image, sunset, night</figcaption>
+        </figure>
+
+        <p>Doing it this way probably made it easier for the developers to keep track of which colors are being swapped out, but it certainly makes the raw image look pretty unsettling. It was probably too complicated to recreate in VGA, which is why it was removed, but they at least made up for it by adding the moon instead.</p>
+
+        <p>This is a slight tangent, but the trigger for the sunset going away is Guybrush entering High Street. This means it's possible to raid the kitchen, earn money at the circus, feed the troll, buy the map, find the treasure (but not dig it up), and visit Carla, Meathook, Smirk, and the Voodoo Lady all before the sun has set.</p>
+
+        <h2>Sunset Remnant</h2>
+
+        <p>Even though the sunset was removed, a remnant of it still exists in the VGA versions!</p>
+
+        <img src="sunsetremnant.png" class="screenshot">
+
+        <p>This patch of EGA background is meant to hide the sun itself, since it can't be removed with palette cycling alone. It has no business being in the VGA versions, but was left in the files anyway.</p>
+
+        <h2>Fishpants</h2>
+
+        <p>This one requires a bit of a detour to fully explain.</p>
+
+        <p>Typically, when completing the thievery trial, the sequence of events will go something like this:</p>
+
+        <p>After Guybrush escapes from the chaos rooms in the mansion with idol in hand, Shinetop confronts him and asks for his "explanation". At this point, there will be four dialogue options to choose from:</p>
+
+        <p><b>"She said I could have it!"</b></p>
+        <p><b>"I was just going to borrow it!"</b></p>
+        <p><b>"It belongs in a museum!"</b></p>
+        <p><b>"The pirate leaders told me to do it!"</b></p>
+
+        <img src="fishpants1.png" class="screenshot">
+
+        <p>For now, it doesn't matter which we choose.</p>
+
+        <p>Later, when Guybrush climbs out of the water (provided there's still at least one trial left to do), he'll say the following: <b>"Now, all I have to do is show this stupid idol to the pirate leaders and--"</b>. So far, there's no apparent connection between this and the dialogue choice from before.</p>
+
+        <img src="fishpants2.png" class="screenshot">
+
+        <p>However, this might go a little differently depending on what we say (or rather, <i>don't</i> say) to the pirate leaders earlier in the game. After they tell Guybrush about the trials, he can ask them for more info about specific ones. The dialogue option we're interested in here is the one that says <b>"Tell me more about mastering the art of thievery."</b></p>
+
+        <img src="fishpants3.png" class="screenshot">
+
+        <p>If we get to the dialogue choice with Shinetop <i>without</i> having asked the pirate leaders about the thievery trial beforehand, the dialogue options will be different! Instead of the fourth option being <b>"The pirate leaders told me to do it!"</b>, it will be:</p>
+
+        <p><b>"I was just taking it out for a walk."</b></p>
+
+        <img src="fishpants4.png" class="screenshot">
+
+        <p>If we choose the line about taking the idol for a walk (and ONLY the line about taking the idol for a walk), then when Guybrush later gets out of the water, he'll instead say:</p>
+
+        <p><b>"Now, all I have to do is get these fish out of my pants."</b></p>
+
+        <img src="fishpants5.png" class="screenshot">
+
+        <p>To be clear, there is zero logical connection between these two events, narratively-speaking. Unlike in the mansion, the game <i>isn't</i> accounting for whether or not Guybrush actually talked to the pirate leaders about the thievery trial here - if you chose one of the other options when talking to Shinetop, Guybrush will always mention the pirate leaders regardless, and he'll talk about the trials after the scene with Elaine as well.</p>
+
+        <p>It's <i>possible</i> the fishpants line was supposed to correlate directly with Guybrush talking to the pirate leaders and the programmers simply got their logic very muddled up, but the code looks intentional to me. Maybe there was a point in development where not talking to the pirate leaders led to the "taking it for a walk" line being the <i>only</i> choice? Or maybe they just programmed it this way on a whim?</p>
+        
+        <h2>Not-So-Scary Ghost</h2>
+
+        <p>At the beginning of Part 4, Guybrush will make a remark about whoever he sailed back to Mêlée with, depending on whether or not you sank the ship during Part 3. Then, when you try to leave the screen to the right, a ghost called Biff will chase Guybrush back onscreen.</p>
+
+        <p>However, if you click to walk offscreen as soon as possible, the timing of the dialogue means Guybrush's remarks get delayed until <i>after</i> Biff finishes chasing him. This means Guybrush ends up talking to himself absentmindedly about something unrelated while Biff is staring him down.</p>
+
+        <figure>
+            <img src="biffcrew.gif" class="screenshot">
+            <figcaption>If you sailed back with your crew</figcaption>
+        </figure>
+
+        <figure>
+            <img src="biffherman.gif" class="screenshot">
+            <figcaption>If you sailed back with Herman</figcaption>
+        </figure>
+        
+        <div class="nav_bar">
+            <div class="nav_button_container home">
+                <a href="../" class="nav_button home_button"><<- home</a>
+            </div>
+
+            <div class="nav_button_container pages">
+                    <div class="nav_button_container left_button_container">
+                    <a href="../" class="nav_button left_button"></a>
+                </div>
+
+                <div class="nav_button_container right_button_container">
+                    <a href="../" class="nav_button right_button"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

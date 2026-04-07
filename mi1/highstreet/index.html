@@ -33,7 +33,7 @@
         
         <h2 id="otiscousins">Otis's Cousin</h2>
 
-        <p>After completing the Three Trials, the way to the mansion will be blocked by the Reservations Guy. Unfortunately we never get a proper look at him, because we only ever see him scaled down to just a handful of pixels.</p>
+        <p>After completing the Three Trials, the way to the mansion will be blocked by the mansion guard, who won't let anyone pass without a reservation.. Unfortunately we never get a proper look at him, because we only ever see him scaled down to just a handful of pixels.</p>
 
         <img src="reservationssmall.png" class="screenshot">
 
@@ -43,25 +43,46 @@
 
         <p>Surprise! It was Otis the whole time!</p>
 
-        <p>Rather than create a whole new costume just for this character who will only ever be seen at a tiny scale, the developers just borrowed Otis's costume and swapped out some of his colors through code to make him look a little different. This version of him appears to have pink hair and a pink beard (which looks like some kind of head scarf, especially at small scale) and pink bunny slippers.</p>
+        <p>Rather than create a whole new costume just for this character who will only ever be seen at a tiny scale, the developers just borrowed Otis's costume and swapped out some of his colors through code to make him look a little different. The CD version of him appears to have pink hair and a pink beard (which looks like some kind of head scarf, especially at small scale) and pink bunny slippers.</p>
 
-        <p>The EGA floppy and VGA floppy versions are pulling the same trick, of course, but he came out looking a little differently in each. Here's a comparison of how he looks across all three versions:</p>
+        <p>The two floppy versions are pulling the same trick, of course, but he came out looking a little differently in each. Here's a comparison of how he looks across all three versions:</p>
         
         <figure>
             <img src="reservationscomparison.png" width="1000" class="pixel_image">
             <figcaption>Left to right: EGA floppy, VGA floppy, CD</figcaption>
         </figure>
 
-        <p>Nothing was changed on the code side of things - these differences are due entirely to changes in the sprites and palettes. In the EGA version (which would have been done first), they gave him cyan trousers (and a spooky glowing eye) by swapping out the two colors used for his trousers, and this was probably the only deliberate choice here. The VGA version looks essentially the same, except for the brown smudge on his trousers, due to an extra shade being added which the palette-swapping doesn't account for.</p>
+        <p>Nothing was changed on the code side of things - these differences are due entirely to changes in the sprites and palettes. In the EGA version (which would have been done first), they gave him cyan trousers (and a spooky glowing eye) by swapping out the two colors used for his trousers, and this was probably the only deliberate choice here. The VGA floppy version looks essentially the same, except for the brown smudge on his trousers, due to an extra shade being added which the palette-swapping doesn't account for.</p>
 
         <p>The CD version is where things really go off the rails. The order of the colors in the costume palette got shuffled around during the upgrade, which means the palette swaps are now pointing to the black used for his hair and shoes, and the blue stripes on his socks. His sock stripes ended up as the lighter cyan (the one used for the trouser highlights in the first two Otises), but the darker cyan got lost somewhere and turned into this bright pink.</p>
 
-        <p>This is a (probably-very-unintended) side-effect of the <b>verb interface colors</b> being updated. The dark cyan we saw before happens to be the exact color used for the sentence line in the floppy version. The CD version adopted Monkey Island 2's purplish color scheme, and that cyan color got replaced with the bright pink used for the highlighted sentence line (as in, specifically the highlighted sentence line, as it looks after you click on something, as if this wasn't confusing enough already).</p>
+        <p>This is a (probably-very-unintended) side-effect of the <b>verb interface colors</b> being updated. The dark cyan we saw before happens to be the exact color used for the sentence line in the floppy versions. The CD version adopted Monkey Island 2's purplish color scheme, and that cyan color got replaced with the bright pink used for the highlighted sentence line (as in, specifically the highlighted sentence line, as it looks after you click on something, as if this wasn't confusing enough already).</p>
 
         <figure>
             <img src="sentencelinecomparison.png" width="960" style="aspect-ratio: 2.0824;" class="pixel_image" >
-            <figcaption>Who'd have thought a simple change like this could have such dramatic ramifications for the poor Reservations Guy?</figcaption>
+            <figcaption>Who'd have thought a simple change like this could have such dramatic ramifications for the poor mansion guard?</figcaption>
         </figure>
+
+        <h2>Off-Duty Guard</h2>
+
+        <p>During Part 4, the mansion guard is still present in the CD and EGA floppy versions, but missing in the VGA floppy version.</p>
+
+        <figure>
+            <img src="guardpresentega.png" class="screenshot">
+            <figcaption>[EGA floppy] There he is...</figcaption>
+        </figure>
+
+        <figure>
+            <img src="guardmissingvga.png" class="screenshot">
+            <figcaption>[VGA floppy] ...now he's gone...</figcaption>
+        </figure>
+
+        <figure>
+            <img src="guardpresentcd.png" class="screenshot">
+            <figcaption>[CD] ...now he's back again!</figcaption>
+        </figure>
+
+        <p>This is a rare instance of a game logic difference between the two floppy versions. In the code, the VGA floppy contains an extra check to see whether or not it's Part 4, and the CD version reverts this change for some reason. Maybe they thought it was a glitch, or maybe they just liked him being there? In any case, it's of no consequence, since Guybrush refuses to go anywhere except the church regardless of whether the guard is there.</p>
 
         <h2 id="curfew">Pirate Curfew</h2>
 
