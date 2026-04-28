@@ -1,93 +1,42 @@
-@font-face {
-    font-family: MonkeyIslandFont;
-    src: url(fonts/MonkeyIsland-1990.ttf);
-}
-
-@font-face {
-    font-family: Coolvetica;
-    src: url(Coolvetica\ Rg.otf);
-}
-
-@font-face {
-    font-family: Escape;
-    src: url(fonts/efmi.TTF);
-}
-
-@font-face {
-    font-family: Goodluck;
-    src: url(fonts/GoodluckBeautiful.ttf);
-}
-
-@font-face {
-    font-family: ScummCredits;
-    src: url(fonts/lucasarts-scumm-credits.otf);
-}
-
-@font-face {
-    font-family: Weathered;
-    src: url(fonts/WEATHERD.TTF);
-}
-
-@font-face {
-    font-family: Atkinson;
-    src: url(fonts/AtkinsonHyperlegible-Regular.ttf);
-    font-weight:normal;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: Atkinson;
-    src: url(fonts/AtkinsonHyperlegible-Bold.ttf);
-    font-weight:bold;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: Atkinson;
-    src: url(fonts/AtkinsonHyperlegible-Italic.ttf);
-    font-weight:normal;
-    font-style:italic;
-}
-
-@font-face {
-    font-family: Atkinson;
-    src: url(fonts/AtkinsonHyperlegible-BoldItalic.ttf);
-    font-weight:bold;
-    font-style:italic;
-}
-
-@font-face {
-    font-family: SpaceMono;
-    src: url(fonts/SpaceMono-Regular.ttf);
-    font-weight:normal;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: SpaceMono;
-    src: url(fonts/SpaceMono-Bold.ttf);
-    font-weight:bold;
-    font-style:normal;
-}
-
 body {
-    margin:0px;
-    margin-bottom:64px;
+    font-family: Arial, Helvetica, sans-serif;
+    
     background:#1e1e2e;
     color:#cdd6f4;
 }
 
-p {
-    font-family: Atkinson;
-    font-size: 18px;
-    line-height: 26px;
+h1 {
+    margin:40px auto;
+    max-width:1000px;
+    padding:0 10px;
 
-    width:95%;
-    max-width: 1000px;
-    margin:auto;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    text-indent: 32px;
+    text-align:center;
+    font-size: 48px;
+    font-weight: bold;
+    color:#89b4fa;
+}
+
+h2 {
+    margin:40px auto;
+    max-width:1000px;
+    padding:0 10px;
+
+    text-align:left;
+    font-size:32px;
+    font-weight: bold;
+    margin-top:120px;
+    color:#89b4fa;
+    line-height: 1.5;
+}
+
+p {
+    margin:20px auto;
+    max-width:1000px;
+    
+    font-size: 18px;
+    line-height: 1.5;
+    
+    text-indent: 0px;
 }
 .doubleindent {
     text-indent: 64px;
@@ -95,10 +44,13 @@ p {
 
 .code {
     text-indent: 0px;
-    font-family: SpaceMono;
-    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
 
-    font-size:18px;
+    font-size:16px;
+    line-height: 1.3;
+
+    margin:unset;
 
     width:unset;
     max-width:none;
@@ -109,12 +61,11 @@ p {
 .code_container {
     background-color: #181825;
 
-    max-width:900px;
-    width:90%;
+    max-width:800px;
+    padding:12px;
 
-    margin: 0 auto;
-
-    padding:8px;
+    margin:40px auto;
+    
     border-radius: 16px;
 
     display: flex;
@@ -123,53 +74,33 @@ p {
 }
 
 var {
-    color: #f38ba8;
+    color: #89b4fa;
     font-style:normal;
 }
 str {
     color: #a6e3a1;
 }
 
-h1 {
-    font-family: MonkeyIslandFont;
-    text-align:center;
-    font-size: 48px;
-    font-weight: normal;
-    color:#89b4fa
-}
-
-h2 {
-    font-family: MonkeyIslandFont;
-    text-align:center;
-    font-size:32px;
-    font-weight: normal;
-    margin-top:120px;
-    color:#f5c2e7
-}
-
 img {
     display:block;
     margin:auto;
     image-rendering: pixelated;
+
+    max-width:100%;
 }
 .normal_image {
     image-rendering:auto;
-    max-width: 100%;
 }
-.pixel_image {
-    max-width: 100%;
-}
+
 .header_image {
     width: 100%;
 }
 .screenshot {
     width: 960px;
-    max-width: 100%;
     aspect-ratio: 1.3333;
 }
 .forest_map_screenshot {
     width: 1560px;
-    max-width: 100%;
     aspect-ratio: 2.1667;
 }
 
@@ -180,7 +111,6 @@ figure{
 }
 
 figcaption{
-    font-family: Atkinson;
     font-style: italic;
     text-align: center;
     margin:auto;
@@ -205,40 +135,32 @@ a {
     text-decoration:none;
 }
 
-.nav_button {
-    font-family: MonkeyIslandFont;
-    font-size: 16px;
-    line-height: 32px;
+.left_button {
+    display:flex;
+    justify-content: right;
+}
 
-    margin-left: 8px;
-    margin-right: 8px;
-    color:#f5c2e7;
+.home_button {
+    display:flex;
+    justify-content: center;
+}
 
-    min-width: 80px;
+.right_button {
+    display:flex;
+    justify-content: left;
 }
 
 .nav_bar {
-    background-color: #313244;
-    min-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+
+    margin:40px;
 }
 
 .nav_button_container {
-    height: 32px;
-    width: 32%;
-    display:inline-block;
-    margin:2px;
-
-    min-width:200px;
-}
-
-.pages {
-    width: 50%
-}
-
-.right_button_container {
-    text-align:left;
-}
-
-.left_button_container {
-    text-align:right;
+    width:200px;
 }

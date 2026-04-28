@@ -1,7 +1,16 @@
-[
-    "lookout",
-    "dock",
-    "lowstreet",
-    "highstreet",
-    "forest"
-]
+{
+    "rooms": [
+        "lookout",
+        "dock",
+        "lowstreet",
+        "highstreet",
+        "forest"
+    ],
+    "nice_names": {
+        "lookout": "Lookout",
+        "dock": "Dock",
+        "lowstreet": "Low Street",
+        "highstreet": "High Street",
+        "forest": "Forest"
+    }
+}

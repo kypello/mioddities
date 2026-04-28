@@ -7,7 +7,7 @@ let currentRoom = urlPath[urlPath.length - 2];
 fetch('../order.json')
     .then(response => response.json())
     .then(data => {
-        rooms = data;
+        rooms = data["rooms"];
 
         leftButtons = document.getElementsByClassName('left_button');
         rightButtons = document.getElementsByClassName('right_button');
@@ -21,14 +21,16 @@ fetch('../order.json')
         
         if (i > 0) {
             for (let j = 0; j < leftButtons.length; j++) {
-                leftButtons[j].textContent = '<- ' + rooms[i-1];
-                leftButtons[j].setAttribute('href', '../' + rooms[i-1] + '/');
+                targetRoom = rooms[i-1]
+                leftButtons[j].textContent = '< ' + data["nice_names"][targetRoom];
+                leftButtons[j].setAttribute('href', '../' + targetRoom + '/');
             }
         }
         if (i < rooms.length - 1) {
             for (let j = 0; j < rightButtons.length; j++) {
-                rightButtons[j].textContent = rooms[i+1] + ' ->';
-                rightButtons[j].setAttribute('href', '../' + rooms[i+1] + '/');
+                targetRoom = rooms[i+1]
+                rightButtons[j].textContent = data["nice_names"][targetRoom] + ' >';
+                rightButtons[j].setAttribute('href', '../' + targetRoom + '/');
             }
         }
     });
