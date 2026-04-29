@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code Tests</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <h1>Code Tests</h1>
+
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+
+        <p>Test 1</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>longitude</var> = (<var>month</var> + <str>256</str>) * <var>day</var> * <str>4</str>
+<key>while</key> <var>longitude</var> > <str>180</str>:
+    <var>longitude</var> /= <str>3</str>
+
+<var>latitude</var> = (<var>day</var> + <str>391</str>) * <str>12</str> / <var>month</var>
+<key>while</key> <var>latitude</var> > <str>90</str>:
+    <var>latitude</var> /= <str>5</str></pre>
+        </div>
+
+        <p>Test 2</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]
+<var>result</var> = <var>threep</var> + <var>wood</var></pre>
+        </div>
+
+        <p>Test 3</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]
+<var>result</var> = <var>threep</var> + <var>wood</var>
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]
+<var>result</var> = <var>threep</var> + <var>wood</var>
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]
+<var>result</var> = <var>threep</var> + <var>wood</var></pre>
+        </div>
+        
+        <p>Test 4</p>
+
+        <div class="code_container">
+            <pre class="code">
+One line</pre>
+        </div>
+
+        <p>Test 5</p>
+
+        <div class="code_container">
+            <pre class="code">
+Multiple lines
+Multiple lines
+Multiple lines
+Multiple lines
+Multiple lines
+Multiple lines</pre>
+        </div>
+
+        <p>Test 6</p>
+
+        <div class="code_container">
+            <pre class="code">
+Long line long line long line long line long line long line long line</pre>
+        </div>
+
+        <p>Test 7</p>
+
+        <div class="code_container">
+            <pre class="code">
+Long line long line long line long line long line long line long line
+Long line long line long line long line long line long line long line
+Long line long line long line long line long line long line long line
+Long line long line long line long line long line long line long line
+Long line long line long line long line long line long line long line
+Long line long line long line long line long line long line long line</pre>
+        </div>
+
+        <p>Test 8</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key></pre>
+        </div>
+
+        <p>Test 9</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> </pre>
+        </div>
+
+        <p>Test 10</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key>
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key>
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key>
+<var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key> <var>h</var><str>i</str><key>g</key><var>h</var><str>l</str><key>i</key><var>g</var><str>h</str><key>t</key><var>e</var><str>d</str><key>!</key></pre>
+        </div>
+
+        <p>Test 11</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]</pre>
+        </div>
+
+        <p>Test 12</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]</pre>
+        </div>
+
+        <p>Test 13</p>
+
+        <div class="code_container">
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]</pre>
+        </div>
+
+        <p>Test 14</p>
+
+        <div class="code_container">
+            <pre class="code">
+'quotes' 'quotes' 'quotes'</pre>
+        </div>
+        
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+    </body>
+</html>
