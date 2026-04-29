@@ -80,6 +80,9 @@ var {
 str {
     color: #a6e3a1;
 }
+key {
+    color: #cba6f7;
+}
 
 img {
     display:block;
@@ -158,6 +161,8 @@ a {
     justify-content: center;
     align-items: center;
     gap:20px;
+    margin-top:20px;
+    margin-bottom:40px;
 }
 
 .nav_button_container {

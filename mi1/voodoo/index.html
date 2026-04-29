@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Voodoo Shop</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <h1>Voodoo Shop</h1>
+
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+        
+        <h2>Early Cauldron</h2>
+
+        <p>The cauldron in the Voodoo Shop is an <i>actor</i>, which means it's a special entity that can move freely around the screen and perform complex animations. However, the room also contains an unused version of the cauldron as an <i>object</i> instead of an actor. This means it can't move and can only be animated in very limited ways. It exists as EGA artwork in all three versions due to being unused.</p>
+
+        <figure>
+            <img src="cauldroncomparison.gif" class="pixel_image" width="752">
+            <figcaption>Left: cauldron object (unused). Right: cauldron actor (final).</figcaption>
+        </figure>
+
+        <p>It looks similar to the final cauldron, except less of the liquid within can be seen. </p>
+
+        <p>If enabled, it doesn't move or animate, and has no zplane (meaning Guybrush and the Voodoo Lady don't get clipped behind it). It's also tagged as "cauldron o' fear", and interacting with it causes Guybrush to say <b>"I can't.  I'm o'feared of it."</b></p>
+
+        <img src="earlycauldron.gif" class="screenshot">
+
+        <p>It's likely that the cauldron was supposed to be there at all times when this version was created, and was redone as an actor when the idea of it rising out of the floor came about.</p>
+
+        <h2>Voodoo Love Beads</h2>
+
+        <p>Besides the cauldron, there are two more hotspots on the right side of the shop that can't normally be interacted with. One of them is the beads hanging from the ceiling, which are called "voodoo love beads", and the other is the Voodoo Lady herself, who is tagged as "fortune teller".</p>
+
+        <p>It's actually possible to mouse over both of them very briefly while the screen transitions to the left, though trying to interact with either will just re-trigger the Voodoo Lady's dialogue.</p>
+        
+        <img src="lovebeads.gif" class="screenshot">
+
+        <p>Interestingly, the same thing <i>isn't</i> possible in either of the demos, because the game waits until the screen is done scrolling before giving control back to the player, which feels cleaner to me.</p>
+
+        <img src="demotransition.gif" class="screenshot">
+
+        <h2>Smoking Statue</h2>
+
+        <p>In the demo, the Voodoo Shop contains an unused variation of the "Charles Atlas" statue, which uses darker colors and has smoke coming out of the orb that it's holding. Instead of being an object, it's drawn into the background itself, way off to the right beyond what the player can see.</p>
+
+        <img src="smokingstatue.png" class="pixel_image" width="216">
+
+        <p>I have no idea what the story behind this could have been. However, I think it's most likely just a random remnant from the process of drawing the background that accidentally got exported with the rest of the image, rather than anything exciting.</p>
+
+        <h2>Birthday Coordinates</h2>
+
+        <div class="code_container">
+            <pre class="code">
+<var>longitude</var> = (<var>month</var> + <str>256</str>) * <var>day</var> * <str>4</str>
+<key>while</key> <var>longitude</var> > <str>180</str>:
+    <var>longitude</var> /= <str>3</str>
+
+<var>latitude</var> = (<var>day</var> + <str>391</str>) * <str>12</str> / <var>month</var>
+<key>while</key> <var>latitude</var> > <str>90</str>:
+    <var>latitude</var> /= <str>5</str></pre>
+        </div>
+        
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -35,11 +35,11 @@
         <p>The algorithm is essentially equivalent to the following pseudocode, where a random string is selected within each set of square brackets:</p>
 
         <div class="code_container">
-            <p class="code"><var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]<br/>
-            <var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]<br/>
-            <var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]<br/>
-            <var>result</var> = <var>threep</var> + <var>wood</var>
-            </p>
+            <pre class="code">
+<var>x</var> = [<str>'b'</str>, <str>'d'</str>, <str>'f'</str>, <str>'k'</str>, <str>'m'</str>, <str>'n'</str>, <str>'t'</str>, <str>'z'</str>]
+<var>threep</var> = [<str>'Three'</str>, <str>'Thump'</str>, <str>'Three'</str> + <var>x</var>, <str>'Throo'</str> + <var>x</var>, <str>'Thra'</str> + <var>x</var>, <str>'Thru'</str> + <var>x</var>]
+<var>wood</var> = [<str>'woo'</str>, <str>'wor'</str>, <str>'wal'</str>, <str>'win'</str>] + [<str>'d'</str>, <str>'d'</str>, <str>'d'</str>, <str>'k'</str>]
+<var>result</var> = <var>threep</var> + <var>wood</var></pre>
         </div>
 
         <p>By my count, that's 272 unique permutations, though some will be more likely to appear than others. The first syllable will most often be "three" or "thump", because the other options nest a random character within them, making each possibility individually rarer; and the second syllable has a 3/4 chance of ending in "d" and a 1/4 chance of ending in "k".</p>

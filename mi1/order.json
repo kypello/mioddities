@@ -2,14 +2,18 @@
     "rooms": [
         "lookout",
         "dock",
+        "bar",
         "lowstreet",
+        "voodoo",
         "highstreet",
         "forest"
     ],
     "nice_names": {
         "lookout": "Lookout",
         "dock": "Dock",
+        "bar": "Scumm Bar",
         "lowstreet": "Low Street",
+        "voodoo": "Voodoo Shop",
         "highstreet": "High Street",
         "forest": "Forest"
     }

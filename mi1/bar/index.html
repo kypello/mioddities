@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scumm Bar</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <h1>Scumm Bar</h1>
+
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+        
+        <h2>Cobb's Flashing Button</h2>
+
+        <p>Cobb's closeup in the EGA version contains some unused graphics. There's an image of the word "Advertisement" which appears in the top left (as opposed to in the final game, where it's rendered as normal text), and a frame of his button with the text darker and the sparkle bigger. There's also an unused script that rapidly alternates between the two button frames, as if it's blinking on and off.</p>
+
+        <img src="cobbobjects.png" class="pixel_image" width="528">
+
+        <p>Here's what it looks like with these things reimplemented:</p>
+
+        <fig>
+            <img src="cobbunused.gif" class="screenshot">
+            <figcaption>Cobb with unused graphics and animations</figcaption>
+        </fig>
+        
+        <p>Compared to the final game:</p>
+
+        <fig>
+            <img src="cobbfinal.gif" class="screenshot">
+            <figcaption>Cobb as he appears in the final game</figcaption>
+        </fig>
+
+        <p>It's not very easy on the eyes, which is probably why this went unused. It's also likely that the word "Advertisement" was changed to a normal piece of text in order to make translation easier.</p>
+
+        <h2>Hovering Mancomb</h2>
+
+        <p>In the EGA version, Mancomb is clearly sitting on a chair, but in the VGA versions, his chair is missing. The artist who did the VGA conversion for this scene seemingly forgot to draw it in.</p>
+
+        <figure>
+            <img src="mancombchair.png" class="pixel_image" width="820">
+            <figcaption>Left: EGA. Right: VGA.</figcaption>
+        </figure>
+
+        <h2>Concealed Beverages</h2>
+
+        <p>All three Pirate Leaders are supposed to be sitting with their arms resting on the table, as can clearly be seen in their costume.</p>
+
+        <img src="leadersfull.png" class="pixel_image" width="660">
+
+        <p>However, in both floppy versions, they were accidentally layered behind the table. This makes it look as if Blue and Green in particular are hiding their mugs under the table.</p>
+
+        <p>This was eventually fixed in the CD version.</p>
+
+        <figure>
+            <img src="leadersega.png" class="screenshot">
+            <figcaption>EGA floppy (VGA floppy looks the same)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="leaderscd.png" class="screenshot">
+            <figcaption>CD</figcaption>
+        </figure>
+
+        <p>Interestingly, at around 4:06:42 in the Video Game History Foundation's 30th anniversary Monkey Island stream, we see footage of the EGA version with the Pirate Leaders layered correctly. This commercial was created when the game was <i>near</i> the end of development, but not quite in its final state, as evidenced by the early title screen, which means the Pirate Leaders probably got messed up right at the last minute.</p>
+
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ikaqus5_QIg?si=wHpevT1XQSSmtQ3z&amp;start=14802" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p>As a side-note, the description of those random wandering pirates as "the most sarcastic seamen ever to hoist the jolly roger" is incredibly funny to me.</p>
+
+        <h2>Invisible Bandana</h2>
+
+        <p>One of the pirates sitting at Estevan's table has a bandana around his head. In the EGA version, the bandana has two loose ends at the back, but they were removed in the VGA versions for unknown reasons. However, the zplane (the bitmask that controls which pixels are transparent) was left unchanged, in that it still follows the outline of the EGA bandana.</p>
+
+        <figure>
+            <img src="bandanacomparison.png" class="pixel_image" width="976">
+            <figcaption>Left to right: EGA, VGA, zplane</figcaption>
+        </figure>
+
+        <p>This means whenever Guybrush or the Cook walks behind this guy's head in the VGA versions, a tiny cutout shape of the bandana ends can be seen.</p>
+
+        <img src="bandana.gif" class="screenshot">
+        <img src="bandanapurple.gif" class="screenshot">
+
+        <h2>Shrugging Pirate Leader</h2>
+
+        <p>When Guybrush first tells the Pirate Leaders <b>"I want to be a pirate!"</b>, in the brief pause before Blue responds with <b>"So what?"</b>, Green does a special "shrug" animation where he splays his hand out. It's extremely easy to miss.</p>
+
+        <img src="greenshrug1.gif" class="screenshot">
+
+        <p>He also does the same animation repeatedly while Blue says <b>"To be a pirate ye must also be a  foul-smelling, grog-swilling pig."</b></p>
+
+        <img src="greenshrug2.gif" class="screenshot">
+        
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">Home</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+    </body>
+</html>
