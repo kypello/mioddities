@@ -54,6 +54,9 @@ p {
 
     width:unset;
     max-width:none;
+    min-width:0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 
     flex: 0 0 auto;
 }
