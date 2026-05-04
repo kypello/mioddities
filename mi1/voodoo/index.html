@@ -17,7 +17,7 @@
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">
@@ -25,7 +25,7 @@
             </div>
         </div>
         
-        <h2>Early Cauldron</h2>
+        <h2>Cauldron O' Fear</h2>
 
         <p>The cauldron in the Voodoo Shop is an <i>actor</i>, which means it's a special entity that can move freely around the screen and perform complex animations. However, the room also contains an unused version of the cauldron as an <i>object</i> instead of an actor. This means it can't move and can only be animated in very limited ways. It exists as EGA artwork in all three versions due to being unused.</p>
 
@@ -64,24 +64,48 @@
 
         <h2>Birthday Coordinates</h2>
 
+        <p>In the standalone demo, when talking to the Voodoo Lady, she'll try to guess your birthday. She'll start by randomly guessing months until you say yes to one of them, then she'll try to guess the day by playing a game of higher/lower with you until you tell her she guessed correctly.</p>
+        
+        <img src="demobirthday.png" class="screenshot">
+
+        <p>Later, when talking to the Citizen of Mêlée, you'll get a chance to ask him for the location of Monkey Island. He'll respond by giving you coordinates (in "longitude/latitude" order, oddly). This appears unrelated, but the coordinates actually depend on the birthday you told the Voodoo Lady earlier! The game takes the month and day and plugs them into a slightly-confusing algorithm which spits out a set of coordinates.</p>
+
+        <figure>
+            <img src="democoordinates.png" class="screenshot">
+            <figcaption>Monkey Island is located somewhere in Ontario</figcaption>
+        </figure>
+        
+
+        <p>The algorithm used to generate coordinates looks like this (in pseudocode):</p>
+
         <div class="code_container">
             <pre class="code">
 <var>longitude</var> = (<var>month</var> + <str>256</str>) * <var>day</var> * <str>4</str>
 <key>while</key> <var>longitude</var> > <str>180</str>:
-    <var>longitude</var> /= <str>3</str>
+    <var>longitude</var> /= <str>3</str>                  <com>//divide longitude by 3</com>
 
 <var>latitude</var> = (<var>day</var> + <str>391</str>) * <str>12</str> / <var>month</var>
 <key>while</key> <var>latitude</var> > <str>90</str>:
-    <var>latitude</var> /= <str>5</str></pre>
+    <var>latitude</var> /= <str>5</str>                   <com>//divide latitude by 5</com></pre>
         </div>
+
+        <p>This means everyone gets their own personalized Monkey Island coordinates.</p>
+
+        <p>At the end of the demo, there are several questions which were part of a contest. You could mail your answers in to Lucasfilm Games for a chance to win various prizes.</p>
+
+        <img src="democontest.png" class="screenshot">
+
+        <p>One of the questions is <b>"What are the coordinates of Monkey Island?"</b>. Because players were instructed to send their date of birth along with their answers, Lucasfilm could use it to verify their answer!</p>
         
+        <p>TODO add null island glitch</p>
+
         <div class="nav_bar">
             <div class="nav_button_container">
                 <a href="../" class="left_button"></a>
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">

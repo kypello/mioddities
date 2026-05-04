@@ -6,7 +6,11 @@
         "lowstreet",
         "voodoo",
         "highstreet",
-        "forest"
+        "mansion",
+        "forest",
+        "shipyard",
+        "smirk",
+        "ship"
     ],
     "nice_names": {
         "lookout": "Lookout",
@@ -15,6 +19,10 @@
         "lowstreet": "Low Street",
         "voodoo": "Voodoo Shop",
         "highstreet": "High Street",
-        "forest": "Forest"
+        "mansion": "Mansion",
+        "forest": "Forest",
+        "shipyard": "Shipyard",
+        "smirk": "Smirk's House",
+        "ship": "Sea Monkey"
     }
 }

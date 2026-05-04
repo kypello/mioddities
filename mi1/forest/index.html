@@ -17,7 +17,7 @@
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">
@@ -29,7 +29,10 @@
 
         <p>If you've ever gone looking for a full map of Mêlée Island's forest, there's a good chance you've come across this one, which has been floating around on the internet for a long time.</p>
 
-        <figure><img src="skillwastemap.gif" class="normal_image"><figcaption>This map was made by someone called Skillwaste, and comes from an old fan site called worldofmi.com which no longer exists.</figcaption></figure>
+        <figure>
+            <img src="skillwastemap.gif" class="normal_image">
+            <figcaption>This map was made by someone called Skillwaste, and originates from an old fan site called worldofmi.com which no longer exists.</figcaption>
+        </figure>
 
         <p>While it works for finding your way around, the layout certainly looks pretty confusing. It's a bit of a spaghetti mess with paths going all over the place and connections that don't seem to make any sense.</p>
 
@@ -78,12 +81,6 @@
         <img src="forestlogbridge1.png" class="forest_map_screenshot">
         <img src="forestlogbridge2.png" class="forest_map_screenshot">
 
-        <h2 id="ledge">Inaccessable Ledge</h2>
-
-        <p>Rooms B5 and A3 both feature a ravine running down the middle, splitting them in half. But while both halves of room B5 can be reached from different places, the left side of A3 is completely inaccessable, despite appearing to have a path leading off the left side of the screen.</p>
-
-        <img src="forestravine.png" class="forest_map_screenshot">
-
         <h2 id="fireflies">Firefly Colors</h2>
 
         <p>The color of the fireflies was changed between the floppy disk and CD versions of the game. The floppy version has bright yellow fireflies, while the CD version has red fireflies. This does appear to have been unintentional, but the technical explanation as to what went wrong is a little complicated.</p>
@@ -106,7 +103,7 @@
             <figcaption>Left: floppy costume (identical in EGA and VGA). Right: CD costume. Note, the rows of colors at the top are the palettes, added by me, not part of the actual sprite.</figcaption>
         </figure>
 
-        <p>Huh! It's red across all versions! This in itself isn't too weird. There are a few other instances of palette cycling where the "default" appearance internally uses strange colors (such as the dock sunset), but the game handles it by swapping in the correct colors at runtime. That's exactly what's happening here in the floppy version, but it somehow got broken in the CD version, so we're left seeing only the default red colors and no shrinking in and out.</p>
+        <p>Huh! It's red across all versions! This in itself isn't too weird. There are a few other instances of palette cycling where the "default" appearance internally uses strange colors (such as the <a href="../dock/#sunset">dock sunset</a>), but the game handles it by swapping in the correct colors at runtime. That's exactly what's happening here in the floppy version, but it somehow got broken in the CD version, so we're left seeing only the default red colors and no shrinking in and out.</p>
 
         <p>The problem appears to come from the CD firefly's reds being ever-so-slightly brighter than those in the floppy firefly. Actors seem to have been universally brightened throughout the CD version, and this is a symptom of that. It's probably too subtle to see on the fireflies without opening them in an image editor, but the difference is more noticable on Guybrush.</p>
 
@@ -133,6 +130,25 @@
         </figure>
         
         <p>Personally, I kinda feel like these should be the other way around. The music should gain an extra instrument to represent the extra character.</p>
+
+        <h2>Ravine Warp</h2>
+        
+        <p>If you open the map while standing on the right half of room B5, Guybrush will be teleported to the other side of the ravine when he puts it away.</p>
+
+        <img src="teleport_2.gif" class="forest_map_screenshot">
+
+        <p>The reason this happens is because of the logic that decides which half of the room should be "walkable" each time you enter. Whenever the room is loaded, the game checks the ID of the previously-loaded room. If it was room C5, then it makes the right half walkable, otherwise it makes the left half walkable.</p>
+
+        <p>The problem is that treasure map closeup is <i>also</i> considered its own "room", which means that when closing it and loading back into room B5, the "previous room" is now the map. And because the game is only checking whether the previous room was specifically C5, it assumes in this case that Guybrush must have come from room A5 or B6, and makes the left half walkable. The game then detects that Guybrush is outside of the valid walkable zone, so it teleports him across the ravine.</p>
+
+        <h2 id="ledge">Inaccessable Ledge</h2>
+
+        <p>Rooms B5 and A3 both feature a ravine running down the middle, splitting them in half. But while both halves of room B5 can be reached from different places, the left side of A3 is completely inaccessable, despite appearing to have a path leading off the left side of the screen.</p>
+
+        <figure>
+            <img src="forestravine.png" class="forest_map_screenshot">
+            <figcaption>Not even the map glitch from before can get us across</figcaption>
+        </figure>
         
         <div class="nav_bar">
             <div class="nav_button_container">
@@ -140,7 +156,7 @@
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">

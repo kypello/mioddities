@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sea Monkey</title>
+        <link rel="stylesheet" href="../../styles.css" type="text/css">
+        <script src="../../jquery-4.0.0.min.js"></script>
+        <script src="../../setup_navbar.js"></script>
+    </head>
+    <body>
+        <h1>Sea Monkey</h1>
+
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">All</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+        
+        <h2>Cabin-Exclusive Bookmark</h2>
+
+        <p>If you read the journal while standing in the Captain's cabin, a bookmark will appear in your inventory.</p>
+
+        <img src="bookmark.gif" class="screenshot">
+
+        <p>However, if you read the book anywhere else on the ship, you won't get the bookmark!</p>
+
+        <img src="nobookmark.gif" class="screenshot">
+
+        <h2>Cereal Softlock #1</h2>
+
+        <p>The main thing we'll be doing in Part 2 is making a potion to get to Monkey Island. The recipe requires that the following items be added to the soup:</p>
+
+        <div class="code_container">
+            <pre class="code">
+<str>cinnamon sticks
+breath mints
+jolly roger
+ink
+fine wine
+rubber chicken
+gunpowder
+cereal</str></pre>
+        </div>
+
+        <p>We'll also need to burn something in the fire to create a "flaming mass" for later. The following items are burnable:</p>
+
+        <div class="code_container">
+            <pre class="code">
+<str>feather pen
+both t-shirts
+dusty book
+yellow petal
+map
+business cards
+cereal</str></pre>
+        </div>
+
+        <p>The cereal is unique in that it's both a burnable item <i>and</i> a necessary potion ingredient, which seems like it could cause an obvious problem. The game actually <i>does</i> stop you from burning the cereal before you've gotten the key out of it, but it <i>doesn't</i> check whether or not you've added it to the soup. This means if you get the key and then burn the cereal before adding it, you'll be softlocked.</p>
+
+        <img src="softlock1.gif" class="screenshot">
+
+        <h2>Cereal Softlock #2</h2>
+
+        <p>We've gone over the eight items that <i>need</i> to be added to the soup, but those aren't the only things that can be added. Once you have the recipe from the cabinet, the game will actually let you throw <i>anything</i> into the soup, <i>except</i> for the following items:</p>
+
+        <div class="code_container">
+            <pre class="code">
+<str>pieces of eight
+rope
+magnetic compass
+leaflet
+brochure
+pamphlet
+flaming mass
+pot
+map</str></pre>
+        </div>
+
+        <p>What this means is that nearly every burnable item <i>can</i> be thrown into the soup instead, which could potentially leave us in a tricky situation if we end up with nothing to burn.</p>
+
+        <p>The map is a potential safety net, since Guybrush <i>will</i> burn it but <i>won't</i> put it in the soup - except it's entirely possible to get through Part 1 without ever buying it if you find the treasure on your own.</p>
+
+        <p>So what about the cereal, then? It's burnable, and adding it to the soup doesn't consume it, so surely we can always at least fall back on that as a last resort?</p>
+
+        <p>Well, I actually lied a tiny bit when I said that the game prevents you from burning it before you've opened it to get the key. What actually happens is that the game prevents you from burning it unless <i>the key is currently in your inventory</i>, which means that if you decide to put the key in the soup, then you can <i>no longer</i> burn the cereal.</p>
+
+        <p>All together, this means that if we complete Part 1 without buying the map, then throw every burnable item <i>and the key</i> into the soup, we will <i>also</i> be softlocked, this time due to having nothing that we can burn.</p>
+
+        <img src="softlock2.gif" class="screenshot">
+
+        <p>The fact that the cereal is programmed in a way that allows for <i>two</i> completely separate ways to softlock yourself makes it possibly the most broken item in the game.</p>
+
+        <h2>Flag Continuity</h2>
+
+        <p>The wide shot of the Sea Monkey contains a continuity error. The Jolly Roger is present both before and after Guybrush has taken it to make the potion.</p>
+
+        <img src="shipflag.gif" class="screenshot">
+
+        <p>The flag is actually an actor, with the raw background containing only the flagless ship. This means that the game could very easily hide or show the flag to maintain continuity with whether or not it's been taken, but doesn't.</p>
+
+        <img src="shipnoflag.png" class="pixel_image" width="960">
+
+        <h2>Red Cabinet</h2>
+
+        <p>In the EGA version, there is an unused variation of the Captain's cabinet with an empty red interior.</p>
+
+        <figure>
+            <img src="cabinetcomparison.png" class="pixel_image" width="800">
+            <figcaption>Left & middle: Cabinet with and without chest, as seen in-game. Right: Unused red cabinet interior.</figcaption>
+        </figure>
+
+        <p>No art exists for the red interior with the chest inside.</p>
+        
+        <h2>Sweaty Monkeys</h2>
+
+        <p>There's some unused dialogue that would have triggered upon entering the hold for the first time, in which Guybrush complains about the ship smelling like monkeys:</p>
+
+        <p><b>"Yech!!!  The unmistakable stench of Monkeys!!!  This whole ship smells like hot, sweaty primates.  I knew I should have taken it for a test sail."</b></p>
+
+        <img src="monkeysmell.gif" class="screenshot">
+
+        <h2>Leaky Hold</h2>
+
+        <p>The Sea Monkey's hold has water leaking in from two different spots. In the floppy versions, these two spots animate very rapidly, while in the CD version, these animations have been slowed down enormously.</p>
+
+        <figure>
+            <img src="floppydrips.gif" class="screenshot">
+            <figcaption>VGA floppy</figcaption>
+        </figure>
+
+        <figure>
+            <img src="cddrips.gif" class="screenshot">
+            <figcaption>CD</figcaption>
+        </figure>
+
+        <p>The reason might have to do with the drip sound effects, which play at the same rate as the animations. The floppy versions play a simple MIDI "bloop" sound extremely rapidly, creating a sort of "bubbling" noise, while the CD version uses higher-quality dripping and splishing sounds which may not have sounded right (or worked at all) when played rapidly.</p>
+
+        <figure>
+            <audio controls>
+                <source src="floppydrips.ogg">
+            </audio>
+            <figcaption>Floppy versions</figcaption>
+        </figure>
+
+        <figure>
+            <audio controls>
+                <source src="cddrips.ogg">
+            </audio>
+            <figcaption>CD version</figcaption>
+        </figure>
+
+        <div class="nav_bar">
+            <div class="nav_button_container">
+                <a href="../" class="left_button"></a>
+            </div>
+            
+            <div class="home_button_container">
+                <a href="../" class="home_button">All</a>
+            </div>
+
+            <div class="nav_button_container">
+                <a href="../" class="right_button"></a>
+            </div>
+        </div>
+    </body>
+</html>

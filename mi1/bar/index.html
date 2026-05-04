@@ -17,7 +17,7 @@
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">
@@ -45,7 +45,7 @@
             <figcaption>Cobb as he appears in the final game</figcaption>
         </fig>
 
-        <p>It's not very easy on the eyes, which is probably why this went unused. It's also likely that the word "Advertisement" was changed to a normal piece of text in order to make translation easier.</p>
+        <p>It's not very easy on the eyes, which is probably why this went unused. It's also likely that the word "Advertisement" was replaced with actual text in order to make translation easier, or just to save on disk space.</p>
 
         <h2>Hovering Mancomb</h2>
 
@@ -82,13 +82,47 @@
 
         <p>As a side-note, the description of those random wandering pirates as "the most sarcastic seamen ever to hoist the jolly roger" is incredibly funny to me.</p>
 
+        <h2>See-Through Table</h2>
+
+        <p>In the EGA version, when the bar is full, the leftmost corner of Estevan's table doesn't correctly mask out Guybrush. Whenever he walks behind this part of the table, he'll appear "in front" of it very noticably.</p>
+
+        <img src="tablecorner.gif" class="screenshot">
+
+        <p>Strangely, this stops being a problem as soon as the bar empties out.</p>
+
+        <img src="tableempty.png" class="screenshot">
+
+        <p>Transparency and clipping is a little weird in SCUMM. The engine <i>can</i> draw things using transparent pixels and layers like we would today, but it can only do so for <i>actors</i>, such as Guybrush. The rest of the screen is basically just a flat image that the actors are drawn on top of. This means if something that's part of the background is supposed to be "in front" of those actors, it has to make use of a slightly more rudimentary technique.</p>
+
+        <p>Official SCUMM terminology for these things is "z-planes", but I will be calling them "clipping masks" because that's what they are and I think that name makes more sense. Essentially, every background and every object has a special one-bit clipping mask attached to it. It's sort of like an alpha channel, except instead of changing the visibility of the image, it just says for any given pixel whether an actor occupying that pixel should be drawn or masked out.</p>
+
+        <p>Here's what the bar's clipping mask looks like:</p>
+
+        <img src="barzplane.png" class="pixel_image" width="1920">
+
+        <p>This looks about how we'd expect, right? The parts of the background that Guybrush is supposed to go <i>behind</i> (specifically, these three tables) are all colored white. So what's going wrong with the corner of that second table?</p>
+
+        <p>The fact that this <i>only happens when the bar is full</i> is the clue to figuring out the problem. Even though they're people, most of the pirates in the bar are technically objects, which means they use the same clipping mask system as the background.</p>
+
+        <p>Here's what the clipping masks for some of the pirates in the bar look like:</p>
+
+        <img src="piratezplanes.png" class="pixel_image" width="392">
+
+        <p>That third one is where our problem is. Those are the two pirates sitting at Mancomb's table in the back, but that tiny corner of Estevan's table is also there in the bottom right. The developers didn't bother giving these two a proper clipping mask, opting instead to leave it black, but that means when this object is drawn over the background, the pure-black clipping mask overrides those few white pixels that are supposed to be on the end of the table.</p>
+
+        <img src="tablecomparison.gif" class="pixel_image" width="1544">
+
+        <p>This was fixed in the VGA versions.</p>
+
+        <img src="tablevga.png" class="screenshot">
+
         <h2>Invisible Bandana</h2>
 
-        <p>One of the pirates sitting at Estevan's table has a bandana around his head. In the EGA version, the bandana has two loose ends at the back, but they were removed in the VGA versions for unknown reasons. However, the zplane (the bitmask that controls which pixels are transparent) was left unchanged, in that it still follows the outline of the EGA bandana.</p>
+        <p>One of the pirates sitting at Estevan's table has a bandana around his head. In the EGA version, the bandana has two loose ends at the back, but they were removed in the VGA versions for unknown reasons. However, the clipping mask was never changed, so it still matches the EGA pirate's silhouette.</p>
 
         <figure>
             <img src="bandanacomparison.png" class="pixel_image" width="976">
-            <figcaption>Left to right: EGA, VGA, zplane</figcaption>
+            <figcaption>Left to right: EGA, VGA, clipping mask</figcaption>
         </figure>
 
         <p>This means whenever Guybrush or the Cook walks behind this guy's head in the VGA versions, a tiny cutout shape of the bandana ends can be seen.</p>
@@ -105,14 +139,54 @@
         <p>He also does the same animation repeatedly while Blue says <b>"To be a pirate ye must also be a  foul-smelling, grog-swilling pig."</b></p>
 
         <img src="greenshrug2.gif" class="screenshot">
+
+        <h2 id="vase">Vase O' Grog</h2>
+
+        <p>If you take the vase from the mansion and try to fill it with grog from the barrel, it will instantly be destroyed.</p>
+
+        <img src="destroyvase.gif" class="screenshot">
+
+        <h2>Really Odd Rump Roast</h2>
+
+        <p>The hunk of meat looks drastically different between the floppy versions and the CD version. In the CD version, it looks like a leg of ham, while in the floppy versions, it looks more like some kind of carcass or ribcage.</p>
         
+        <figure>
+            <img src="meatcomparison.png" class="pixel_image" width="792">
+            <figcaption>Left: floppy. Right: CD.</figcaption>
+        </figure>
+
+        <h2>Purple Grog</h2>
+
+        <p>In the floppy versions, the puddle of grog under the tap is purple. In the CD version, it was changed to green, which is consistent with the other depictions of grog in the game.</p>
+
+        <figure>
+            <img src="grogcomparison.png" class="pixel_image" width="792">
+            <figcaption>Left: floppy. Right: CD.</figcaption>
+        </figure>
+
+        <h2>Extra Petals</h2>
+
+        <p>Normally, the game will only ever let you take one yellow petal from the forest. Even after putting the dogs to sleep, Guybrush will refuse to take another.</p>
+
+        <img src="petals.png" class="screenshot">
+
+        <p>The game makes one exception, though - if Guybrush puts the yellow petal into the pot of stew in the kitchen, then it will let him take a new one.</p>
+
+        <img src="bayleaf.gif" class="screenshot">
+
+        <p>However, there's an alternative way of spiking the meat. Instead of combining the meat and petal directly, you can put them separately into the pot and then take the meat back out. If you do it this way, then the game <i>will</i> let you take another petal, because it thinks your old one is still in the pot.</p>
+
+        <p>You can now feed the pre-spiked meat to the dogs while also keeping the yellow petal in your inventory. The game will let you hold onto it until the beginning of Part 3, when it gets taken away.</p>
+
+        <img src="extrapetal.gif" class="screenshot">
+
         <div class="nav_bar">
             <div class="nav_button_container">
                 <a href="../" class="left_button"></a>
             </div>
             
             <div class="home_button_container">
-                <a href="../" class="home_button">Home</a>
+                <a href="../" class="home_button">All</a>
             </div>
 
             <div class="nav_button_container">
