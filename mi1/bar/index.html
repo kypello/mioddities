@@ -94,7 +94,7 @@
 
         <p>Transparency and clipping is a little weird in SCUMM. The engine <i>can</i> draw things using transparent pixels and layers like we would today, but it can only do so for <i>actors</i>, such as Guybrush. The rest of the screen is basically just a flat image that the actors are drawn on top of. This means if something that's part of the background is supposed to be "in front" of those actors, it has to make use of a slightly more rudimentary technique.</p>
 
-        <p>Official SCUMM terminology for these things is "z-planes", but I will be calling them "clipping masks" because that's what they are and I think that name makes more sense. Essentially, every background and every object has a special one-bit clipping mask attached to it. It's sort of like an alpha channel, except instead of changing the visibility of the image, it just says for any given pixel whether an actor occupying that pixel should be drawn or masked out.</p>
+        <p>Official SCUMM terminology for these things is "z-planes", but I will be calling them "clipping masks" because I think that name makes more sense. Essentially, every background and every object has a special one-bit clipping mask attached to it. It's sort of like an alpha channel, except instead of changing the visibility of the image, it just says for any given pixel whether an actor occupying that pixel should be drawn or masked out.</p>
 
         <p>Here's what the bar's clipping mask looks like:</p>
 
