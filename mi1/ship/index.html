@@ -85,7 +85,7 @@ pot
 map</str></pre>
         </div>
 
-        <p>What this means is that nearly every burnable item <i>can</i> be thrown into the soup instead, which could potentially leave us in a tricky situation if we end up with nothing to burn.</p>
+        <p>What this means is that nearly every burnable item <i>can</i> also be thrown into the soup instead, which could potentially leave us in a tricky situation if we end up with nothing to burn.</p>
 
         <p>The map is a potential safety net, since Guybrush <i>will</i> burn it but <i>won't</i> put it in the soup - except it's entirely possible to get through Part 1 without ever buying it if you find the treasure on your own.</p>
 
@@ -157,6 +157,60 @@ map</str></pre>
             </audio>
             <figcaption>CD version</figcaption>
         </figure>
+
+        <h2>Masked Moustaches</h2>
+
+        <p>Here's what the clipping mask for the open cupboard in the galley looks like:</p>
+
+        <figure>
+            <img src="cupboardzplane.png" class="pixel_image" width="684">
+            <figcaption>Left: Open cupboard object (CD version). Right: Open cupboard clipping mask.</figcaption>
+        </figure>
+
+        <p>Somehow, the white moustaches on the cereal boxes ended up being part of the clipping mask, which should be pure black for an object like this.</p>
+
+        <p>Guybrush isn't tall enough for this to ever be noticable, but if it <i>were</i> somehow possible for him to overlap with the cupboard, he would appear "behind" the moustaches.</p>
+
+        <figure>
+            <img src="teethzplane.gif" class="screenshot">
+            <figcaption>VGA floppy version</figcaption>
+        </figure>
+
+        <p>The CD version has an extra level of weirdness, because the moustaches appear black instead of white.</p>
+
+        <figure>
+            <img src="teethzplanecd.gif" class="screenshot">
+            <figcaption>CD version</figcaption>
+        </figure>
+        
+        <p>I don't know why the color of the moustaches is different in the CD version. Internally, the raw image for the open cupboard shows the cereal boxes with white moustaches in every version (in fact, the image shown earlier is extracted directly from the CD version), which means something is turning them black at runtime.</p>
+
+        <h2>Cabin Items</h2>
+
+        <p>Four items found in the captain's cabin (the dusty book, bookmark, soup recipe, and cinnamon sticks) have unused object images attached to them, even though they only ever appear in Guybrush's inventory. Here's what they look like in the VGA versions:</p>
+
+        <img src="cabinitems.png" class="pixel_image" width="280">
+
+        <p>Yep, all four of them are tiny, identical, almost-black squares.</p>
+
+        <p>If made visible, two of them appear on top of each other in the top-left corner, while the other two appear eight pixels down and to the right.</p>
+
+        <img src="cabinitemsvisible.png" class="screenshot">
+
+        <p>They're very difficult to see due to being almost the same color as the background.</p>
+
+        <figure>
+            <img src="cabinitemscropped.png" class="pixel_image" width="520">
+            <figcaption>Left: Top-left corner of the cabin with the objects made visible. Right: Same image with increased exposure.</figcaption>
+        </figure>
+
+        <p>In the EGA version, these objects are pure black, which makes them impossible to see even if enabled because the part of the background they occupy is also pure black.</p>
+
+        <p>However, even though they're all normally invisible, the "piece of paper" is actually <i>interactable</i> in the EGA version before it's in your inventory without any modifications! Attempting to use or look at it will open the recipe closeup and leave you unable to close it, hardlocking the game.</p>
+
+        <img src="recipehardlock.gif" class="screenshot">
+
+        <p>This was fixed in the VGA floppy version, making it a rare game logic difference between the two floppy versions.</p>
 
         <div class="nav_bar">
             <div class="nav_button_container">

@@ -47,9 +47,11 @@
 
         <p>This is <a href="../lookout/#names">the exact same system that the Lookout uses</a>. I've written a more in-depth explanation of how this works in that section.</p>
 
+        <p>For the Special Edition, they chose six variations for Earl Boen to say: <b>"Throotwink", "Threekword", "Thumpwind", "Threedwork", "Throofwood"</b> and <b>"Throomwald"</b>, the last one he strangely pronounces like "Throomwade".</p>
+
         <h2>Spiffy Painting</h2>
 
-        <p>The dog in the painting is actually Spiffy, the dog from the bar. Guybrush's description of the painting changes depending on whether or not he recognizes him. He'll either say <b>"I don't recognize the man, but he has a great hat."</b>, or <b>"... but that looks like the dog in the bar."</b></p>
+        <p>The dog in the painting is actually Spiffy, the dog from the bar. Guybrush's description of the painting changes depending on whether or not he recognizes him. He'll either say <b>"I don't recognize the man, but he has a great hat"</b>, or <b>"... but that looks like the dog in the bar."</b></p>
 
         <img src="paintinghat.png" class="screenshot">
         <img src="paintingspiffy.png" class="screenshot">
@@ -59,6 +61,53 @@
         <p>Specifically, we have to first say either <b>"Woof"</b>, <b>"Arf"</b>, or <b>"Ruff"</b> at the first dialogue choice, and then say <b>"Wuf, 'LeChuck?'"</b> at the second choice. If done correctly, Spiffy will talk about "Governor Marley" and "Monkey Island", and Guybrush will now recognize him when looking at the painting.</p>
 
         <img src="spiffymonkeyisland.png" class="screenshot">
+
+        <p>The implication is that Spiffy used to belong to the man in the painting, who is presumably Captain Marley. Maybe he's actually a stray Piranha Poodle?</p>
+
+        <h2>Cyan Text</h2>
+
+        <p>While Guybrush is in the chaos rooms, the sentence line in the CD version uses the wrong "highlight" color. Instead of turning pink when executing an action, it becomes the same cyan color used in the floppy versions.</p>
+
+        <figure>
+            <img src="sentencefloppy.png" class="screenshot">
+            <figcaption>VGA floppy</figcaption>
+        </figure>
+
+        <figure>
+            <img src="sentencecd.png" class="screenshot">
+            <figcaption>CD</figcaption>
+        </figure>
+
+        <p>The reason this happens is because the game isn't actually executing these sentences as commands the way it normally does - instead it's "faking" it by changing the text to a hardcoded color so that it looks like an action is being performed. The CD version uses different colors for the sentence line, but the code for these cutscenes was never updated to reflect that.</p>
+
+        <h2>Blue Notice</h2>
+
+        <p>The "IMPORTANT NOTICE" that pops up after putting the dogs to sleep looks drastically different between the floppy versions and the CD version.</p>
+
+        <figure>
+            <img src="noticefloppy.png" class="screenshot">
+            <figcaption>VGA floppy</figcaption>
+        </figure>
+
+        <figure>
+            <img src="noticecd.png" class="screenshot">
+            <figcaption>CD</figcaption>
+        </figure>
+
+        <p>The green text at the top has been changed to purple due to the verb color being changed, and the white background has been changed to dark blue for reasons that aren't clear to me. The raw image for the popup box is white in every version, which means something is changing its color at runtime.</p>
+
+        <p>Whatever causes the white to become blue also affects many of the stars in the background.</p>
+
+        <figure>
+            <img src="starscomparison.gif" class="pixel_image" width="480">
+            <figcaption>Comparison between the stars in the raw background and how they appear in-game.</figcaption>
+        </figure>
+
+        <h2>Chatty Dogs</h2>
+
+        <p>Much like Spiffy, Guybrush can talk to the piranha poodles, which makes them respond by rapidly yipping.</p>
+
+        <img src="dogsyip.gif" class="screenshot">
 
         <div class="nav_bar">
             <div class="nav_button_container">
